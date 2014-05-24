@@ -66,9 +66,9 @@ use Sub::Exporter '-setup' => { exports => [qw( current_cmd is_build is_install 
 
 sub current_cmd {
   my $i = 0;
-  while ( my @frame = caller($i) ) {
+  while ( my @frame = caller $i ) {
     $i++;
-    next unless ( my ( $command, $method ) = $frame[3] =~ /\ADist::Zilla::App::Command::(.*)::([^:\s]+)\z/msx );
+    next unless ( my ( $command, ) = $frame[3] =~ /\ADist::Zilla::App::Command::(.*)::([^:\s]+)\z/msx );
     return $command;
   }
   return;
