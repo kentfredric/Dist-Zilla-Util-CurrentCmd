@@ -1,9 +1,13 @@
+use 5.008;    # utf8
 use strict;
 use warnings;
+use utf8;
 
 package Dist::Zilla::Util::CurrentCmd;
 $Dist::Zilla::Util::CurrentCmd::VERSION = '0.001000';
 # ABSTRACT: Attempt to determine the current command Dist::Zilla is running under.
+
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Moose;
 
