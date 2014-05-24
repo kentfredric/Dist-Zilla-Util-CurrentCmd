@@ -150,13 +150,13 @@ say, having an C<ENV> flag to control this difference.
 
 =head2 C<current_cmd>
 
-Returns the name of the of the B<first> C<command> entry in the C<caller> stack that matches 
+Returns the name of the of the B<first> C<command> entry in the C<caller> stack that matches
 
-  /\ADist::Zilla::App::Command::(.*)::([^:\s]+)\z/msx 
+  /\ADist::Zilla::App::Command::(.*)::([^:\s]+)\z/msx
 
 For instance:
 
-  Dist::Zilla::App::Command::build::execute -> 
+  Dist::Zilla::App::Command::build::execute ->
       build
 
 =head2 C<is_build>

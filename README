@@ -41,7 +41,7 @@ FUNCTIONS
 
     For instance:
 
-      Dist::Zilla::App::Command::build::execute -> 
+      Dist::Zilla::App::Command::build::execute ->
           build
 
   "is_build"
