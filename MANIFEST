@@ -8,6 +8,8 @@ META.json
 META.yml
 Makefile.PL
 README
+author/show_stack/dist.ini
+author/show_stack/lib/Example.pm
 dist.ini
 lib/Dist/Zilla/Util/CurrentCmd.pm
 maint/perlcritic.rc.gen.pl
