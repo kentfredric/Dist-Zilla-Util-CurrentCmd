@@ -22,11 +22,11 @@ SYNOPSIS
 
 DESCRIPTION
     This module exists in case you are absolutely certain you want to have
-    different behaviours for either a plugin, or a bundle, to trigger on (
-    or off ) a specific phase.
+    different behaviors for either a plugin, or a bundle, to trigger on ( or
+    off ) a specific phase.
 
     Usually, this is a bad idea, and the need to do this suggests a poor
-    choice of workflow to begin with.
+    choice of work-flow to begin with.
 
     That said, this utility is *probably* more useful in a bundle than in a
     plugin, in that it will be slightly more optimal than say, having an
@@ -47,11 +47,11 @@ FUNCTIONS
   "is_build"
     Convenience shorthand for "current_cmd() eq 'build'"
 
-  "is_build"
-    Convenience shorthand for "current_cmd() eq 'build'"
+  "is_install"
+    Convenience shorthand for "current_cmd() eq 'install'"
 
 CAVEATS
-    User beware, this code is both hacky and new, and relies on using
+    User beware, this code is both hackish and new, and relies on using
     "caller" to determine which "Dist::Zilla::App::Command::" we are running
     under.
 
@@ -60,9 +60,9 @@ CAVEATS
     misleading representation of what is actually running.
 
     And there's a degree of uncertainty of reliability, because I haven't
-    yet divised reliable ways of testing it that don't involve invoking dzil
-    ( which is problematic on testers where Dist::Zilla is in @INC but
-    "dzil" is not in "ENV{PATH}" )
+    yet devised reliable ways of testing it that don't involve invoking
+    "dzil" ( which is problematic on testers where "Dist::Zilla" is in @INC
+    but "dzil" is not in "ENV{PATH}" )
 
     To that extent, I don't even know for sure if this module works yet, or
     if it works in a bundle, or if it works in all commands, or if it works
