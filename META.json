@@ -110,6 +110,17 @@
       }
    },
    "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/kentfredric/Dist-Zilla-Util-CurrentCmd/issues"
+      },
+      "homepage" : "https://github.com/kentfredric/Dist-Zilla-Util-CurrentCmd",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/kentfredric/Dist-Zilla-Util-CurrentCmd.git",
+         "web" : "https://github.com/kentfredric/Dist-Zilla-Util-CurrentCmd"
+      }
+   },
    "version" : "0.001000",
    "x_BuiltWith" : {
       "modules" : {

@@ -28,6 +28,10 @@ requires:
   strict: '0'
   utf8: '0'
   warnings: '0'
+resources:
+  bugtracker: https://github.com/kentfredric/Dist-Zilla-Util-CurrentCmd/issues
+  homepage: https://github.com/kentfredric/Dist-Zilla-Util-CurrentCmd
+  repository: https://github.com/kentfredric/Dist-Zilla-Util-CurrentCmd.git
 version: '0.001000'
 x_BuiltWith:
   modules:
