@@ -176,12 +176,12 @@
          "warnings" : "1.23"
       },
       "perl" : {
-         "original" : "v5.19.11",
+         "original" : "v5.20.0",
          "qv" : 1,
          "version" : [
             5,
-            19,
-            11
+            20,
+            0
          ]
       },
       "perl-config" : {
@@ -194,7 +194,7 @@
    },
    "x_Dist_Zilla" : {
       "perl" : {
-         "version" : "5.019011"
+         "version" : "5.020000"
       },
       "plugins" : [
          {

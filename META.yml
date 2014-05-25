@@ -93,12 +93,12 @@ x_BuiltWith:
     version: '0.9908'
     warnings: '1.23'
   perl:
-    original: v5.19.11
+    original: v5.20.0
     qv: 1
     version:
       - 5
-      - 19
-      - 11
+      - 20
+      - 0
   perl-config:
     gccversion: 4.8.2
     myarchname: x86_64-linux
@@ -107,7 +107,7 @@ x_BuiltWith:
   uname: 'Linux 3.14.4-gentoo x86_64 GenuineIntel GNU/Linux'
 x_Dist_Zilla:
   perl:
-    version: '5.019011'
+    version: '5.020000'
   plugins:
     -
       class: Dist::Zilla::Plugin::Git::NextVersion::Sanitized
