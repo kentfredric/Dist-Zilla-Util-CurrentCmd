@@ -1,6 +1,8 @@
 Release history for Dist-Zilla-Util-CurrentCmd
 
 {{$NEXT}}
+
+0.001000 2014-05-25T18:47:46Z
  - First version.
 
  [Dependencies::Aggregate]
