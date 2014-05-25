@@ -3,3 +3,9 @@ Release history for Dist-Zilla-Util-CurrentCmd
 {{$NEXT}}
  - First version.
 
+ [Dependencies::Aggregate]
+ - 5.008009 : 52
+ - 5.010001 : 46
+ - 5.018002 : 29
+ - 5.019009 : 29
+
