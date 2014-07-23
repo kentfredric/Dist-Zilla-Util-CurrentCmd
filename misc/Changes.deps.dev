@@ -1,6 +1,8 @@
 This file contains changes to DEVELOPMENT dependencies only ( both REQUIRED and OPTIONAL )
 
-0.001001
+0.001002
+
+0.001001 2014-07-23T06:27:22Z
  [Added / develop requires]
  - Dist::Zilla::Plugin::BumpVersionAfterRelease
  - Dist::Zilla::Plugin::CopyFilesFromBuild
