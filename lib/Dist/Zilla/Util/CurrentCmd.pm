@@ -5,6 +5,8 @@ use utf8;
 
 package Dist::Zilla::Util::CurrentCmd;
 
+our $VERSION = '0.001001';
+
 # ABSTRACT: Attempt to determine the current command Dist::Zilla is running under.
 
 # AUTHORITY
