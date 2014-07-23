@@ -5,7 +5,7 @@ use utf8;
 
 package Dist::Zilla::Util::CurrentCmd;
 
-our $VERSION = '0.001001';
+our $VERSION = '0.001002';
 
 # ABSTRACT: Attempt to determine the current command Dist::Zilla is running under.
 
@@ -120,7 +120,7 @@ Dist::Zilla::Util::CurrentCmd - Attempt to determine the current command Dist::Z
 
 =head1 VERSION
 
-version 0.001001
+version 0.001002
 
 =head1 SYNOPSIS
 
