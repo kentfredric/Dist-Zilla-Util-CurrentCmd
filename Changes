@@ -1,9 +1,9 @@
 Release history for Dist-Zilla-Util-CurrentCmd
 
-0.001001 2014-07-23T06:20:43Z
+0.001001 2014-07-23T06:22:15Z
  [Dependencies::Stats]
  - Dependencies changed since 0.001000, see misc/*.deps* for details
- - develop: +2 -3 (suggests: +2 -1)
+ - develop: +3 -3 (suggests: +2 -1)
  - test: +2 ↑1 (recommends: +1)
 
 0.001000 2014-05-25T18:47:46Z
