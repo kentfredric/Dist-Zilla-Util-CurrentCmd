@@ -12,6 +12,7 @@ README
 author/show_stack/dist.ini
 author/show_stack/lib/Example.pm
 dist.ini
+dist.ini.meta
 lib/Dist/Zilla/Util/CurrentCmd.pm
 maint/perlcritic.rc.gen.pl
 misc/Changes.deps
