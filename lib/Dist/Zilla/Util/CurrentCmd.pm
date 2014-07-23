@@ -4,7 +4,9 @@ use warnings;
 use utf8;
 
 package Dist::Zilla::Util::CurrentCmd;
-$Dist::Zilla::Util::CurrentCmd::VERSION = '0.001001';
+
+our $VERSION = '0.001001';
+
 # ABSTRACT: Attempt to determine the current command Dist::Zilla is running under.
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
