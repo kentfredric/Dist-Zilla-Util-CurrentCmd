@@ -1,6 +1,10 @@
 Release history for Dist-Zilla-Util-CurrentCmd
 
 {{$NEXT}}
+ [00 Minor]
+ - new function: as_cmd();
+ - is_build and is_install no longer spew about undefined if outside a command.
+
  [Dependencies::Stats]
  - Dependencies changed since 0.001001, see misc/*.deps* for details
  - configure: ↓1

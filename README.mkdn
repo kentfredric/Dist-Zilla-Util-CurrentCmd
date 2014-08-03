@@ -4,7 +4,7 @@ Dist::Zilla::Util::CurrentCmd - Attempt to determine the current command Dist::Z
 
 # VERSION
 
-version 0.001002
+version 0.002000
 
 # SYNOPSIS
 
@@ -52,6 +52,16 @@ Convenience shorthand for `current_cmd() eq 'build'`
 ## `is_install`
 
 Convenience shorthand for `current_cmd() eq 'install'`
+
+## `as_cmd`
+
+Internals wrapper to lie to code operating in the callback that the `current_cmd` is.
+
+    as_cmd('install' => sub {
+
+        is_install(); # true
+
+    });
 
 # CAVEATS
 
