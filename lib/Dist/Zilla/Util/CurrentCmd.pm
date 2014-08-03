@@ -5,7 +5,7 @@ use utf8;
 
 package Dist::Zilla::Util::CurrentCmd;
 
-our $VERSION = '0.001002';
+our $VERSION = '0.002000';
 
 # ABSTRACT: Attempt to determine the current command Dist::Zilla is running under.
 
@@ -31,7 +31,7 @@ use Moose;
 
 
 
-use Sub::Exporter '-setup' => { exports => [qw( current_cmd is_build is_install )], };
+use Sub::Exporter '-setup' => { exports => [qw( current_cmd is_build is_install as_cmd )], };
 
 
 
@@ -72,9 +72,14 @@ use Sub::Exporter '-setup' => { exports => [qw( current_cmd is_build is_install 
 
 
 
+
+our $_FORCE_CMD;
 
 sub current_cmd {
   my $i = 0;
+  if ($_FORCE_CMD) {
+    return $_FORCE_CMD;
+  }
   while ( my @frame = caller $i ) {
     $i++;
     next unless ( my ( $command, ) = $frame[3] =~ /\ADist::Zilla::App::Command::(.*)::([^:\s]+)\z/msx );
@@ -90,7 +95,8 @@ sub current_cmd {
 
 
 sub is_build {
-  return 'build' eq current_cmd();
+  my $cmd = current_cmd();
+  return ( defined $cmd and 'build' eq $cmd );
 }
 
 
@@ -100,7 +106,26 @@ sub is_build {
 
 
 sub is_install {
-  return 'install' eq current_cmd();
+  my $cmd = current_cmd();
+  return ( defined $cmd and 'install' eq $cmd );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+sub as_cmd {
+  my ( $cmd, $callback ) = @_;
+  local $_FORCE_CMD = $cmd;
+  return $callback->();
 }
 
 __PACKAGE__->meta->make_immutable;
@@ -120,7 +145,7 @@ Dist::Zilla::Util::CurrentCmd - Attempt to determine the current command Dist::Z
 
 =head1 VERSION
 
-version 0.001002
+version 0.002000
 
 =head1 SYNOPSIS
 
@@ -168,6 +193,16 @@ Convenience shorthand for C<current_cmd() eq 'build'>
 =head2 C<is_install>
 
 Convenience shorthand for C<current_cmd() eq 'install'>
+
+=head2 C<as_cmd>
+
+Internals wrapper to lie to code operating in the callback that the C<current_cmd> is.
+
+  as_cmd('install' => sub {
+
+      is_install(); # true
+
+  });
 
 =head1 CAVEATS
 
