@@ -124,6 +124,7 @@ Internals wrapper to lie to code operating in the callback that the C<current_cm
 
 sub as_cmd {
   my ( $cmd, $callback ) = @_;
+  ## no critic ( Variables::ProhibitLocalVars )
   local $_FORCE_CMD = $cmd;
   return $callback->();
 }
