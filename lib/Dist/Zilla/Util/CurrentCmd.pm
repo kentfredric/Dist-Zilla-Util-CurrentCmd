@@ -95,7 +95,8 @@ Convenience shorthand for C<current_cmd() eq 'build'>
 =cut
 
 sub is_build {
-  return 'build' eq current_cmd();
+  my $cmd = current_cmd();
+  return ( defined $cmd and 'build' eq $cmd );
 }
 
 =func C<is_install>
@@ -105,7 +106,8 @@ Convenience shorthand for C<current_cmd() eq 'install'>
 =cut
 
 sub is_install {
-  return 'install' eq current_cmd();
+  my $cmd = current_cmd();
+  return ( defined $cmd and 'install' eq $cmd );
 }
 
 =func C<as_cmd>
