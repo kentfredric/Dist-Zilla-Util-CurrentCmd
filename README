@@ -3,7 +3,7 @@ NAME
     Dist::Zilla is running under.
 
 VERSION
-    version 0.001001
+    version 0.002000
 
 SYNOPSIS
       use Dist::Zilla::Util::CurrentCmd qw(current_cmd);
@@ -49,6 +49,16 @@ FUNCTIONS
 
   "is_install"
     Convenience shorthand for "current_cmd() eq 'install'"
+
+  "as_cmd"
+    Internals wrapper to lie to code operating in the callback that the
+    "current_cmd" is.
+
+      as_cmd('install' => sub {
+
+          is_install(); # true
+
+      });
 
 CAVEATS
     User beware, this code is both hackish and new, and relies on using
