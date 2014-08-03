@@ -31,7 +31,7 @@ use Moose;
 
 =cut
 
-use Sub::Exporter '-setup' => { exports => [qw( current_cmd is_build is_install )], };
+use Sub::Exporter '-setup' => { exports => [qw( current_cmd is_build is_install as_cmd )], };
 
 =head1 DESCRIPTION
 
@@ -73,8 +73,13 @@ For instance:
 
 =cut
 
+our $_FORCE_CMD;
+
 sub current_cmd {
   my $i = 0;
+  if ($_FORCE_CMD) {
+    return $_FORCE_CMD;
+  }
   while ( my @frame = caller $i ) {
     $i++;
     next unless ( my ( $command, ) = $frame[3] =~ /\ADist::Zilla::App::Command::(.*)::([^:\s]+)\z/msx );
@@ -101,6 +106,24 @@ Convenience shorthand for C<current_cmd() eq 'install'>
 
 sub is_install {
   return 'install' eq current_cmd();
+}
+
+=func C<as_cmd>
+
+Internals wrapper to lie to code operating in the callback that the C<current_cmd> is.
+
+  as_cmd('install' => sub {
+
+      is_install(); # true
+
+  });
+
+=cut
+
+sub as_cmd {
+  my ( $cmd, $callback ) = @_;
+  local $_FORCE_CMD = $cmd;
+  return $callback->();
 }
 
 __PACKAGE__->meta->make_immutable;
