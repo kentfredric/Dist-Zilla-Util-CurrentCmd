@@ -124,6 +124,7 @@ sub is_install {
 
 sub as_cmd {
   my ( $cmd, $callback ) = @_;
+  ## no critic ( Variables::ProhibitLocalVars )
   local $_FORCE_CMD = $cmd;
   return $callback->();
 }
