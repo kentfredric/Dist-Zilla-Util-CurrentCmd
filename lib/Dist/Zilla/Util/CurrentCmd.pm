@@ -13,52 +13,7 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Moose;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 use Sub::Exporter '-setup' => { exports => [qw( current_cmd is_build is_install as_cmd )], };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

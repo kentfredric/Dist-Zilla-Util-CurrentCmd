@@ -32,11 +32,11 @@ subtest with_cmd => sub {
 };
 
 subtest without_cmd => sub {
-   isnt( current_cmd(), 'foo', 'foo doesnt turn up without a cmd running' );
-   isnt( current_cmd(), 'install', 'install doesnt pass through without a cmd running' );
-   isnt( current_cmd(), 'build', 'build doesnt pass through without a cmd running' );
-   ok( !is_install(), 'is_install is false' );
-   ok( !is_build(), 'is_build is false' );
+  isnt( current_cmd(), 'foo',     'foo doesnt turn up without a cmd running' );
+  isnt( current_cmd(), 'install', 'install doesnt pass through without a cmd running' );
+  isnt( current_cmd(), 'build',   'build doesnt pass through without a cmd running' );
+  ok( !is_install(), 'is_install is false' );
+  ok( !is_build(),   'is_build is false' );
 };
 done_testing;
 
