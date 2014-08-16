@@ -3,7 +3,7 @@ NAME
     Dist::Zilla is running under.
 
 VERSION
-    version 0.002001
+    version 0.002002
 
 SYNOPSIS
       use Dist::Zilla::Util::CurrentCmd qw(current_cmd);
