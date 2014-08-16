@@ -5,7 +5,7 @@ use utf8;
 
 package Dist::Zilla::Util::CurrentCmd;
 
-our $VERSION = '0.002000';
+our $VERSION = '0.002001';
 
 # ABSTRACT: Attempt to determine the current command Dist::Zilla is running under.
 
@@ -13,52 +13,7 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Moose;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 use Sub::Exporter '-setup' => { exports => [qw( current_cmd is_build is_install as_cmd )], };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -146,7 +101,7 @@ Dist::Zilla::Util::CurrentCmd - Attempt to determine the current command Dist::Z
 
 =head1 VERSION
 
-version 0.002000
+version 0.002001
 
 =head1 SYNOPSIS
 
