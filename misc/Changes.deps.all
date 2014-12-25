@@ -16,6 +16,7 @@ This file contains ALL changes in dependencies in both REQUIRED / OPTIONAL depen
  - Test::More
 
  [Added / test requires]
+ - Moose 2.1205
  - perl 5.006
 
  [Changed / configure recommends]
@@ -31,6 +32,7 @@ This file contains ALL changes in dependencies in both REQUIRED / OPTIONAL depen
  - Dist::Zilla::PluginBundle::Author::KENTNL 2.017002 → 2.022002
 
  [Changed / runtime requires]
+ - Moose 0 → 2.1205
  - perl 5.008 → 5.006
 
  [Changed / test recommends]

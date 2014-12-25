@@ -5,9 +5,11 @@ This file contains changes in REQUIRED dependencies for standard CPAN phases (co
  - perl 5.006
 
  [Added / test requires]
+ - Moose 2.1205
  - perl 5.006
 
  [Changed / runtime requires]
+ - Moose 0 → 2.1205
  - perl 5.008 → 5.006
 
  [Removed / runtime requires]
