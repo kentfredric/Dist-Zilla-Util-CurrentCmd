@@ -4,7 +4,7 @@ use warnings;
 
 package Dist::Zilla::Util::CurrentCmd;
 
-our $VERSION = '0.002002';
+our $VERSION = '0.002003';
 
 # ABSTRACT: Attempt to determine the current command Dist::Zilla is running under.
 
@@ -100,7 +100,7 @@ Dist::Zilla::Util::CurrentCmd - Attempt to determine the current command Dist::Z
 
 =head1 VERSION
 
-version 0.002002
+version 0.002003
 
 =head1 SYNOPSIS
 
