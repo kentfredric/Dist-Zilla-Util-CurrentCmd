@@ -1,6 +1,8 @@
 Release history for Dist-Zilla-Util-CurrentCmd
 
 {{$NEXT}}
+
+0.002002 2014-12-25T12:35:22Z bfb3c3f
  [Bugfix]
  - Avoid Module::Runtime quirk on a few bad moose by requiring a newer version.
 
