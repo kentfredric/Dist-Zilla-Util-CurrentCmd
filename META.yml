@@ -5,6 +5,7 @@ author:
 build_requires:
   ExtUtils::MakeMaker: '0'
   File::Spec: '0'
+  Moose: '2.1205'
   Test::More: '0.89'
   perl: '5.006'
 configure_requires:
@@ -22,7 +23,7 @@ provides:
     file: lib/Dist/Zilla/Util/CurrentCmd.pm
     version: '0.002002'
 requires:
-  Moose: '0'
+  Moose: '2.1205'
   Sub::Exporter: '0'
   perl: '5.006'
   strict: '0'
@@ -501,9 +502,9 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::Prereqs
       config:
         Dist::Zilla::Plugin::Prereqs:
-          phase: runtime
+          phase: test
           type: requires
-      name: Prereqs
+      name: TestRequires
       version: '5.029'
     -
       class: Dist::Zilla::Plugin::FinderCode
