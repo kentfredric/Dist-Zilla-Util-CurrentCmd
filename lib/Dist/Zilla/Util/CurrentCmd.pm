@@ -176,7 +176,7 @@ commands, or if it works under C<Dist::Zilla::App::Tester> as expected.
 
 =head1 AUTHOR
 
-Kent Fredric <kentfredric@gmail.com>
+Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
