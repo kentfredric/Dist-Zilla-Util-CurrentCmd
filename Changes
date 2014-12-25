@@ -1,5 +1,16 @@
 Release history for Dist-Zilla-Util-CurrentCmd
 
+0.002002 2014-12-25T12:35:22Z bfb3c3f
+ [Bugfix]
+ - Avoid Module::Runtime quirk on a few bad moose by requiring a newer version.
+
+ [Dependencies::Stats]
+ - Dependencies changed since 0.002001, see misc/*.deps* for details
+ - configure: +1 (recommends: ↑1)
+ - develop: +6 ↑3 -2 (recommends: +1, suggests: ↑2)
+ - runtime: ↑1 ↓1 -1
+ - test: +2 (recommends: ↑2)
+
 0.002001 2014-08-15T21:58:42Z
  [00 Trivial]
  - CPANDAY!

@@ -1,11 +1,10 @@
-use 5.008;    # utf8
+use 5.006;
 use strict;
 use warnings;
-use utf8;
 
 package Dist::Zilla::Util::CurrentCmd;
 
-our $VERSION = '0.002001';
+our $VERSION = '0.002002';
 
 # ABSTRACT: Attempt to determine the current command Dist::Zilla is running under.
 
@@ -101,7 +100,7 @@ Dist::Zilla::Util::CurrentCmd - Attempt to determine the current command Dist::Z
 
 =head1 VERSION
 
-version 0.002001
+version 0.002002
 
 =head1 SYNOPSIS
 
@@ -177,7 +176,7 @@ commands, or if it works under C<Dist::Zilla::App::Tester> as expected.
 
 =head1 AUTHOR
 
-Kent Fredric <kentfredric@gmail.com>
+Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
