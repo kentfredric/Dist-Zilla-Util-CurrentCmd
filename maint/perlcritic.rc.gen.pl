@@ -30,7 +30,6 @@ for my $wordlist (@stopwords) {
 #$bundle->remove_policy('NamingConventions::Capitalization');
 $bundle->remove_policy('CodeLayout::RequireUseUTF8');
 
-
 my $inf = $bundle->actionlist->get_inflated;
 
 my $config = $inf->apply_config;
