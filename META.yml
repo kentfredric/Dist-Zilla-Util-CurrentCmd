@@ -21,7 +21,7 @@ name: Dist-Zilla-Util-CurrentCmd
 provides:
   Dist::Zilla::Util::CurrentCmd:
     file: lib/Dist/Zilla/Util/CurrentCmd.pm
-    version: '0.002003'
+    version: '0.002004'
 recommends:
   Moose: '2.000'
 requires:
@@ -34,4 +34,4 @@ resources:
   bugtracker: https://github.com/kentnl/Dist-Zilla-Util-CurrentCmd/issues
   homepage: https://github.com/kentnl/Dist-Zilla-Util-CurrentCmd
   repository: https://github.com/kentnl/Dist-Zilla-Util-CurrentCmd.git
-version: '0.002003'
+version: '0.002004'
