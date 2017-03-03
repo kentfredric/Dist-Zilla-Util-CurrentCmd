@@ -1,102 +1,37 @@
-NAME
+Dist::Zilla::Util::CurrentCmd
 
-    Dist::Zilla::Util::CurrentCmd - Attempt to determine the current
-    command Dist::Zilla is running under.
+This module exists in case you are absolutely certain you want to have
+different behaviors for either a plugin, or a bundle, to trigger on ( or
+off ) a specific phase.
 
-VERSION
+Usually, this is a bad idea, and the need to do this suggests a poor
+choice of work-flow to begin with.
 
-    version 0.002002
+That said, this utility is *probably* more useful in a bundle than in a
+plugin, in that it will be slightly more optimal than say, having an
+"ENV" flag to control this difference.
 
-SYNOPSIS
+INSTALLATION
 
-      use Dist::Zilla::Util::CurrentCmd qw(current_cmd);
-    
-      ...
-    
-      if ( is_install() ) {
-        die "This plugin hates installing things for some reason!"
-      }
-      if ( is_build() ) {
-        print "I Love you man\n";
-      }
-      if ( current_cmd() eq 'run' ) {
-        die "RUN THE OTHER WAY"
-      }
+This is a Perl module distribution. It should be installed with whichever
+tool you use to manage your installation of Perl, e.g. any of
 
-DESCRIPTION
+  cpanm .
+  cpan  .
+  cpanp -i .
 
-    This module exists in case you are absolutely certain you want to have
-    different behaviors for either a plugin, or a bundle, to trigger on (
-    or off ) a specific phase.
+Consult http://www.cpan.org/modules/INSTALL.html for further instruction.
+Should you wish to install this module manually, the procedure is
 
-    Usually, this is a bad idea, and the need to do this suggests a poor
-    choice of work-flow to begin with.
-
-    That said, this utility is probably more useful in a bundle than in a
-    plugin, in that it will be slightly more optimal than say, having an
-    ENV flag to control this difference.
-
-FUNCTIONS
-
- current_cmd
-
-    Returns the name of the of the first command entry in the caller stack
-    that matches
-
-      /\ADist::Zilla::App::Command::(.*)::([^:\s]+)\z/msx
-
-    For instance:
-
-      Dist::Zilla::App::Command::build::execute ->
-          build
-
- is_build
-
-    Convenience shorthand for current_cmd() eq 'build'
-
- is_install
-
-    Convenience shorthand for current_cmd() eq 'install'
-
- as_cmd
-
-    Internals wrapper to lie to code operating in the callback that the
-    current_cmd is.
-
-      as_cmd('install' => sub {
-    
-          is_install(); # true
-    
-      });
-
-CAVEATS
-
-    User beware, this code is both hackish and new, and relies on using
-    caller to determine which Dist::Zilla::App::Command:: we are running
-    under.
-
-    There may be conditions that there are no Commands in the caller stack
-    which meet this definition, or the first such thing may be a misleading
-    representation of what is actually running.
-
-    And there's a degree of uncertainty of reliability, because I haven't
-    yet devised reliable ways of testing it that don't involve invoking
-    dzil ( which is problematic on testers where Dist::Zilla is in @INC but
-    dzil is not in ENV{PATH} )
-
-    To that extent, I don't even know for sure if this module works yet, or
-    if it works in a bundle, or if it works in all commands, or if it works
-    under Dist::Zilla::App::Tester as expected.
-
-AUTHOR
-
-    Kent Fredric <kentnl@cpan.org>
+  perl Makefile.PL
+  make
+  make test
+  make install
 
 COPYRIGHT AND LICENSE
 
-    This software is copyright (c) 2014 by Kent Fredric
-    <kentfredric@gmail.com>.
+This software is copyright (c) 2017 by Kent Fredric
+<kentfredric@gmail.com>.
 
-    This is free software; you can redistribute it and/or modify it under
-    the same terms as the Perl 5 programming language system itself.
-
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
