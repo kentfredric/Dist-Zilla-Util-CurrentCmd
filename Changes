@@ -1,6 +1,16 @@
 Release history for Dist-Zilla-Util-CurrentCmd
 
-0.002003 2014-12-25T12:37:14Z e5779a7
+0.002003 2017-03-03T10:43:24Z 7164a42
+ [Bugfix]
+ - Avoid test failures on 5.26 w/ -Ddefault_inc_excludes_dot
+ - Closes https://github.com/kentnl/Dist-Zilla-Util-CurrentCmd/issues/1
+
+ [Dependencies::Stats]
+ - Dependencies changed since 0.002002, see misc/*.deps* for details
+ - configure: (recommends: ↓1)
+ - develop: +8 ↑3 -1 (recommends: ↓1, suggests: ↑2)
+ - runtime: (recommends: +1)
+ - test: ↓1 (recommends: ↓2)
 
 0.002002 2014-12-25T12:35:22Z bfb3c3f
  [Bugfix]
@@ -54,4 +64,3 @@ Release history for Dist-Zilla-Util-CurrentCmd
  - 5.010001 : 46
  - 5.018002 : 29
  - 5.019009 : 29
-
